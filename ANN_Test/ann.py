@@ -61,12 +61,13 @@ X_test = sc.transform(X_test)
 #################Part 2 - Now let's make the ANN!####################
 #####################################################################
 
+# keras a neural network library
 # Importing the Keras libraries and packages
 import keras
 from keras.models import Sequential # initialize Neural Network
 from keras.layers import Dense # Build layers of ANN
 
-# Initialising the ANN, is Squence of Layers
+# Initialising the ANN, is Sequence of Layers
 classifier = Sequential() 
 
 '''
@@ -139,10 +140,16 @@ cm = confusion_matrix(y_test, y_pred)
 
 
 
+# Essential Library
+#   -Keras
+#   -Tensorflow --> Very complicated ... which is why keras wraps theano and tensorflow
+#   -Numpy
+#   -Sklearn
 
-
-
-
+# Recurrrent Neural Networks
+#   - Used for Time Series Analysis
+#   - ANN is for Regression and Classification
+#   - CNN used for computer vision
 
 
 
