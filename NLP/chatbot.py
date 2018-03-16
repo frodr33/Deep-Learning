@@ -26,3 +26,13 @@ conversations_ids = []
 for conv in conversations[:-1]:
     _conv = conv.split( " +++$+++ ")[-1][1:-1].replace("'", "").replace(" ", "")
     conversations_ids.append(_conv.split(","))
+    
+# Getting separate lists of questions and answers
+# In conversations_ids, the ith element is the Question
+# and the ith + 1 element is the Answer
+questions = []
+answers = []
+for conversation in conversations_ids:
+    for i in range(len(conversation) -1):
+        questions.append(id2line[conversation[i]])
+        answers.append(id2line[conversation[i+1]])
